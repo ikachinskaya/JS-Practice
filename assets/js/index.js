@@ -90,3 +90,67 @@ const arr8 = arr7.slice(0, 3);
 const arr9 = arr7.slice(3, 6);
 console.log(arr8);
 console.log(arr9);
+
+console.log("splice");
+const arr10 = [1, 2, 3, 4, 5];
+arr10.splice(1, 2);
+console.log(arr10);
+
+const arr11 = [1, 2, 3, 4, 5];
+const arr12 = arr11.splice(1, 3);
+console.log(arr12);
+
+const arr13 = [1, 2, 3, 4, 5];
+arr13.splice(3, 0, "a", "b", "c");
+console.log(arr13);
+
+const arr14 = [1, 2, 3, 4, 5];
+arr14.splice(1, 4, "a", "b", 2, 3, 4, "c", 5, "e");
+console.log(arr14);
+
+console.log("sort");
+const arr15 = [3, 4, 1, 2, 7];
+arr15.sort();
+console.log(arr15);
+
+console.log("Object.keys");
+const obj = {
+  js: "test",
+  jq: "hello",
+  css: "world",
+};
+const arrKeys = Object.keys(obj);
+console.log(arrKeys);
+console.log("============");
+
+console.log("hasElem");
+const hasElem = function (array, str) {
+  return array.includes(str);
+};
+const array1 = [1, 5, 9, "string", 4, 9, 2];
+console.log(hasElem(array1, "string"));
+console.log(hasElem(array1, "array"));
+
+console.log("findNumbersOfArray");
+const findNumbersOfArray = function (arr, value) {
+  for (let i = 0; i < arr.length; i++) {
+    return arr[i] === value;
+  }
+};
+const arr20 = [1, 59, 2, 8, 52, 9, 21, 78, 1, 3, 4, 56, 6, 7, 8, 9];
+console.log(findNumbersOfArray(arr20, 1));
+console.log(findNumbersOfArray(arr20, 1111));
+
+console.log("findTwoNumbersOfArray");
+const findTwoNumbersOfArray = function (arr) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === arr[i + 1]) {
+      return true;
+    }
+  }
+  return false;
+};
+const arr30 = [1, 2, 464, 123, 45, 5, 9, 9];
+const arr40 = [1, 2, 464, 123, 45, 5, 9];
+console.log(findTwoNumbersOfArray(arr30));
+console.log(findTwoNumbersOfArray(arr40));
